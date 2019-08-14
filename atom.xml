@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-12T08:10:02.000Z</updated>
+  <updated>2019-08-14T07:25:30.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>关于我</title>
-    <link href="http://yoursite.com/2019/08/12/%E5%85%B3%E4%BA%8E%E6%88%91/"/>
-    <id>http://yoursite.com/2019/08/12/关于我/</id>
+    <title>理解对象</title>
+    <link href="http://yoursite.com/2019/08/12/%E7%90%86%E8%A7%A3%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com/2019/08/12/理解对象/</id>
     <published>2019-08-12T08:08:41.000Z</published>
-    <updated>2019-08-12T08:10:02.000Z</updated>
+    <updated>2019-08-14T07:25:30.000Z</updated>
     
     <summary type="html">
     
+      &lt;hr&gt;
+&lt;h3 id=&quot;什么是对象？&quot;&gt;&lt;a href=&quot;#什么是对象？&quot; class=&quot;headerlink&quot; title=&quot;什么是对象？&quot;&gt;&lt;/a&gt;什么是对象？&lt;/h3&gt;&lt;p&gt;对象是无序属性的集合，其属性可以包含基本值、对象或者函数，在javascript中，对象是拥有属性和方法的数据。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每个对象都是基于一个引用类创建的。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
     </summary>
     
-      <category term="个人" scheme="http://yoursite.com/categories/%E4%B8%AA%E4%BA%BA/"/>
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
     
     
-      <category term="介绍我" scheme="http://yoursite.com/tags/%E4%BB%8B%E7%BB%8D%E6%88%91/"/>
+      <category term="Object" scheme="http://yoursite.com/tags/Object/"/>
     
   </entry>
   
