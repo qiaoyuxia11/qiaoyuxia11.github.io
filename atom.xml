@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-15T03:22:33.000Z</updated>
+  <updated>2019-08-15T03:25:26.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="http://yoursite.com/2019/08/15/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/2019/08/15/面向对象的程序设计模式/</id>
     <published>2019-08-15T02:58:55.000Z</published>
-    <updated>2019-08-15T03:22:33.000Z</updated>
+    <updated>2019-08-15T03:25:26.000Z</updated>
     
     <summary type="html">
     
       &lt;hr&gt;
-&lt;h3 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h3&gt;&lt;p&gt;工厂模式是软件工程领域一种广为认知的设计模式。&lt;br&gt;工厂模式虽然解决了创建多个对象的问题，但却没有解决对象的识别问题（即怎样知道一个对象的类型）。&lt;/p&gt;
+&lt;h2 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot; title=&quot;工厂模式&quot;&gt;&lt;/a&gt;工厂模式&lt;/h2&gt;&lt;p&gt;工厂模式是软件工程领域一种广为认知的设计模式。&lt;br&gt;工厂模式虽然解决了创建多个对象的问题，但却没有解决对象的识别问题（即怎样知道一个对象的类型）。&lt;/p&gt;
     
     </summary>
     
@@ -42,12 +42,12 @@
     <link href="http://yoursite.com/2019/08/12/%E7%90%86%E8%A7%A3%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2019/08/12/理解对象/</id>
     <published>2019-08-12T08:08:41.000Z</published>
-    <updated>2019-08-14T10:05:22.000Z</updated>
+    <updated>2019-08-15T03:25:54.000Z</updated>
     
     <summary type="html">
     
       &lt;hr&gt;
-&lt;h3 id=&quot;什么是对象？&quot;&gt;&lt;a href=&quot;#什么是对象？&quot; class=&quot;headerlink&quot; title=&quot;什么是对象？&quot;&gt;&lt;/a&gt;什么是对象？&lt;/h3&gt;&lt;p&gt;对象是无序属性的集合，其属性可以包含基本值、对象或者函数，在javascript中，对象是拥有属性和方法的数据。&lt;/p&gt;
+&lt;h2 id=&quot;什么是对象？&quot;&gt;&lt;a href=&quot;#什么是对象？&quot; class=&quot;headerlink&quot; title=&quot;什么是对象？&quot;&gt;&lt;/a&gt;什么是对象？&lt;/h2&gt;&lt;p&gt;对象是无序属性的集合，其属性可以包含基本值、对象或者函数，在javascript中，对象是拥有属性和方法的数据。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;每个对象都是基于一个引用类创建的。&lt;/p&gt;
 &lt;/blockquote&gt;
