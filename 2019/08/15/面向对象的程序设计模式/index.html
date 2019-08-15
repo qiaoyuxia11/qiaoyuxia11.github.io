@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="喬喬">
 <meta property="og:description" content="工厂模式工厂模式是软件工程领域一种广为认知的设计模式。工厂模式虽然解决了创建多个对象的问题，但却没有解决对象的识别问题（即怎样知道一个对象的类型）。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-15T03:09:44.000Z">
+<meta property="og:updated_time" content="2019-08-15T03:22:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象的程序设计模式">
 <meta name="twitter:description" content="工厂模式工厂模式是软件工程领域一种广为认知的设计模式。工厂模式虽然解决了创建多个对象的问题，但却没有解决对象的识别问题（即怎样知道一个对象的类型）。">
@@ -443,7 +443,7 @@
 <li>返回新对象。</li>
 </ul>
 </blockquote>
-<h5 id="将构造函数当作函数"><a href="#将构造函数当作函数" class="headerlink" title="将构造函数当作函数"></a>将构造函数当作函数</h5><p>构造函数也是函数，通过new操作符调用的话，就是构造函数，不通过new操作符调用的话就是普通函数。以前面的例子为例：</p>
+<h4 id="将构造函数当作函数"><a href="#将构造函数当作函数" class="headerlink" title="将构造函数当作函数"></a>将构造函数当作函数</h4><p>构造函数也是函数，通过new操作符调用的话，就是构造函数，不通过new操作符调用的话就是普通函数。以前面的例子为例：</p>
 <ul>
 <li><p>当作构造函数使用</p>
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="type">Person</span>(<span class="string">'乔乔'</span>,<span class="number">16</span>,<span class="string">'web前端工程师'</span>);</span><br><span class="line">person.sayName(); <span class="comment">//'乔乔'</span></span><br></pre></td></tr></table></figure>
@@ -456,7 +456,7 @@
 
 </li>
 </ul>
-<h5 id="构造函数的问题"><a href="#构造函数的问题" class="headerlink" title="构造函数的问题"></a>构造函数的问题</h5><p>缺点：每个方法都要在每个实例上重新创建一边，因为函数是对象，因此每定义一个函数，也就是实例化了一个对象。以这种方式创建函数，会导致不同的作用域链和标识符解析，但创建Function新实例的机制依然是相同的，因此不同函实例上的同名函数是不相等的。                                  </p>
+<h4 id="构造函数的问题"><a href="#构造函数的问题" class="headerlink" title="构造函数的问题"></a>构造函数的问题</h4><p>缺点：每个方法都要在每个实例上重新创建一边，因为函数是对象，因此每定义一个函数，也就是实例化了一个对象。以这种方式创建函数，会导致不同的作用域链和标识符解析，但创建Function新实例的机制依然是相同的，因此不同函实例上的同名函数是不相等的。                                  </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(person1.sayName == person2.sayName); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 
 <p>可以通过把函数定义装一刀构造函数外部来解决这个问题。</p>
@@ -729,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂模式"><span class="nav-number">1.</span> <span class="nav-text">工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数模式"><span class="nav-number">2.</span> <span class="nav-text">构造函数模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#将构造函数当作函数"><span class="nav-number">2.0.1.</span> <span class="nav-text">将构造函数当作函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数的问题"><span class="nav-number">2.0.2.</span> <span class="nav-text">构造函数的问题</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#原型模式"><span class="nav-number">3.</span> <span class="nav-text">原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合使用构造函数模式和原型模式"><span class="nav-number">4.</span> <span class="nav-text">组合使用构造函数模式和原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态原型模式"><span class="nav-number">5.</span> <span class="nav-text">动态原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寄生构造函数模式"><span class="nav-number">6.</span> <span class="nav-text">寄生构造函数模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#稳妥构造函数模式"><span class="nav-number">7.</span> <span class="nav-text">稳妥构造函数模式</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂模式"><span class="nav-number">1.</span> <span class="nav-text">工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数模式"><span class="nav-number">2.</span> <span class="nav-text">构造函数模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将构造函数当作函数"><span class="nav-number">2.1.</span> <span class="nav-text">将构造函数当作函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数的问题"><span class="nav-number">2.2.</span> <span class="nav-text">构造函数的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型模式"><span class="nav-number">3.</span> <span class="nav-text">原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合使用构造函数模式和原型模式"><span class="nav-number">4.</span> <span class="nav-text">组合使用构造函数模式和原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态原型模式"><span class="nav-number">5.</span> <span class="nav-text">动态原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寄生构造函数模式"><span class="nav-number">6.</span> <span class="nav-text">寄生构造函数模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#稳妥构造函数模式"><span class="nav-number">7.</span> <span class="nav-text">稳妥构造函数模式</span></a></li></ol></div>
             
 
           </div>
