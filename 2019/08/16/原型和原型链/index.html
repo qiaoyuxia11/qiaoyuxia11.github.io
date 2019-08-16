@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Object,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -81,18 +81,22 @@
 
 
 
-<meta name="description" content="什么是对象？对象是无序属性的集合，其属性可以包含基本值、对象或者函数，在javascript中，对象是拥有属性和方法的数据。  每个对象都是基于一个引用类创建的。">
-<meta name="keywords" content="Object">
+<meta name="description" content="prototype是js面向对象的一个重要机制，说难很难，说简单也简单，原型链最终指向null。 首先要明确：函数（Function）才有prototype属性，对象（除Object）拥有__proto__。 原型链的顶层就是Object.prototype，而这个对象的是没有原型对象的，在chrome控制台中输入Object.__proto__，输出是ƒ () {  }，一个空的函数。 对于初">
 <meta property="og:type" content="article">
-<meta property="og:title" content="理解对象">
-<meta property="og:url" content="http://yoursite.com/2019/08/12/理解对象/index.html">
+<meta property="og:title" content="原型和原型链">
+<meta property="og:url" content="http://yoursite.com/2019/08/16/原型和原型链/index.html">
 <meta property="og:site_name" content="喬喬">
-<meta property="og:description" content="什么是对象？对象是无序属性的集合，其属性可以包含基本值、对象或者函数，在javascript中，对象是拥有属性和方法的数据。  每个对象都是基于一个引用类创建的。">
+<meta property="og:description" content="prototype是js面向对象的一个重要机制，说难很难，说简单也简单，原型链最终指向null。 首先要明确：函数（Function）才有prototype属性，对象（除Object）拥有__proto__。 原型链的顶层就是Object.prototype，而这个对象的是没有原型对象的，在chrome控制台中输入Object.__proto__，输出是ƒ () {  }，一个空的函数。 对于初">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-16T10:28:38.000Z">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/58B8EEFA1C474910BC374124C7F205CE/1205">
+<meta property="og:image" content="https://camo.githubusercontent.com/356478f5341888f6f0d56c77b6492624fc2f252e/68747470733a2f2f7069632e7869616f68756f636861692e736974652f626c6f672f4a535f45434d415f6772616d6d65725f70726f746f2e706e67">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/07B5B6570C6E48E9AA5C33141E0FFACD/1430">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/93110EEE8E8B4A11ABB0778B64366FBB/1432">
+<meta property="og:updated_time" content="2019-08-16T10:33:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="理解对象">
-<meta name="twitter:description" content="什么是对象？对象是无序属性的集合，其属性可以包含基本值、对象或者函数，在javascript中，对象是拥有属性和方法的数据。  每个对象都是基于一个引用类创建的。">
+<meta name="twitter:title" content="原型和原型链">
+<meta name="twitter:description" content="prototype是js面向对象的一个重要机制，说难很难，说简单也简单，原型链最终指向null。 首先要明确：函数（Function）才有prototype属性，对象（除Object）拥有__proto__。 原型链的顶层就是Object.prototype，而这个对象的是没有原型对象的，在chrome控制台中输入Object.__proto__，输出是ƒ () {  }，一个空的函数。 对于初">
+<meta name="twitter:image" content="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/58B8EEFA1C474910BC374124C7F205CE/1205">
 
 
 
@@ -126,7 +130,7 @@
 
 
 
-  <title>理解对象 | 喬喬</title>
+  <title>原型和原型链 | 喬喬</title>
   
 
 
@@ -295,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/理解对象/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/原型和原型链/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="乔乔">
@@ -312,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">理解对象</h1>
+          <h1 class="post-title" itemprop="name headline">原型和原型链</h1>
         
 
         <div class="post-meta">
@@ -324,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T16:08:41+08:00">
-                2019-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-16T18:29:15+08:00">
+                2019-08-16
               </time>
             
 
@@ -334,28 +338,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -378,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  581
+                  1.7k
                 </span>
               
 
@@ -394,7 +376,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  6
                 </span>
               
             </div>
@@ -416,35 +398,50 @@
 
       
         <hr>
-<h2 id="什么是对象？"><a href="#什么是对象？" class="headerlink" title="什么是对象？"></a>什么是对象？</h2><p>对象是无序属性的集合，其属性可以包含基本值、对象或者函数，在javascript中，对象是拥有属性和方法的数据。</p>
-<blockquote>
-<p>每个对象都是基于一个引用类创建的。</p>
-</blockquote>
-<a id="more"></a>
+<p>prototype是js面向对象的一个重要机制，说难很难，说简单也简单，原型链最终指向null。</p>
+<p>首先要明确：函数（Function）才有prototype属性，对象（除Object）拥有<code>__proto__</code>。</p>
+<p>原型链的顶层就是Object.prototype，而这个对象的是没有原型对象的，在chrome控制台中输入Object.<code>__proto__</code>，输出是ƒ () {  }，一个空的函数。</p>
+<p>对于初学者来说，JavaScript的原型是一件让人头疼甚至吐血的事情，prototype和<code>__proto__</code>又让人傻傻分不清，虽然网上有很多相关资料，还有一张经典的图，线条很多，看的就头疼，更甚者吐血身亡，就算是对于“老人”，也不好整明白呀，或者好不容易搞清楚了，过几天又忘了（我就是这样，嘿嘿）。接下来请用许我尽可能形象生动的来阐述明白，哈哈哈哈哈。。。</p>
+<h2 id="理解原型对象"><a href="#理解原型对象" class="headerlink" title="理解原型对象"></a>理解原型对象</h2><h3 id="prototype-和-proto-？"><a href="#prototype-和-proto-？" class="headerlink" title="prototype 和 __proto__ ？"></a>prototype 和 <code>__proto__</code> ？</h3><p>prototype是只有函数才会有的属性；而<code>__proto__</code>是所有对象都有的属性。<br>几乎所有的函数都有一个prototype属性，prototype上挂载的所有属性和方法都可以被这个函数的实例继承。</p>
+<p>不管什么时候，只要你创建了一个函数，它就会具有prototype属性，这个属性指向函数的原型对象。默认情况下所有的对象都会又一个constructor(构造函数属性)，这个属性指向prototype属性所在函数的指针。emm~ 是不是看晕了？没关系，让我们来点代码和配图，你可以直接吐了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">//这个是一个构造函数</span></span><br><span class="line">Person.prototype <span class="comment">//这个是函数的原型对象</span></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(); <span class="comment">// 调用构造函数创建的实例</span></span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(); <span class="comment">// 调用构造函数创建的实例</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h2><ul>
-<li><p>创建自定义对象的最简单方式就是创建一个Object的实例，然后再为它添加属性和方法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">obj.name = <span class="string">'qyx'</span>;</span><br><span class="line">obj.age = <span class="number">18</span>;</span><br><span class="line">obj.job = <span class="string">'web开发工程师'</span>；</span><br><span class="line"></span><br><span class="line">obj.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>代码分析：创建了一个自定义的构造函数之后，其原型对象默认会取得一个constructor属性，Person.prototype.constructor指向的是Person,当调用一个构造函数创建一个实例之后，该实例的内部就会有一个指针<code>__proto__</code>（内部属性[[Prototype]]）,指向构造函数的原型对象，这个连接存在与实例与构造函数的原型对象之间，而不是实例与构造函数之间。</p>
+<p><img src="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/58B8EEFA1C474910BC374124C7F205CE/1205" alt="我的头像"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person.prototype===person1.__proto__ <span class="comment">//true</span></span><br><span class="line">person1.__proto__.constructor === person1.constructor===Person <span class="comment">// true</span></span><br><span class="line">Person.constructor===<span class="built_in">Function</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
-<p>  使用new关键字来创建一个拥有独立内存区域和指向原型的指针的对象。当我们使用的new的时候，js解析器会分配一块内存空间，用以存放当前的对象的自有属性。之后解析器会给这一对象一个<strong>proto</strong>属性指向的原型对象内容。</p>
-</li>
-<li><p>对象直接量创建</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'qyx'</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    job:<span class="string">'web开发工程师'</span>,</span><br><span class="line">    sayName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>扩展：如果[[Prototype]]指向调用isPrototype()方法的对象）（Person.prototype），那么这个方法就会返回true。</p>
+<pre><code>console.log(Person.prototype.isPrototypeOf(person1)); // true  
+console.log(Person.prototype.isPrototypeOf(person2)); // true </code></pre><p>ECMAScript5 增加了一个新方法 Object.getPrototypeOf()。</p>
+<pre><code>console.log(Object.getPrototypeOf(person1) === Person.prototype); // true</code></pre><p><font color="blue">怎么样？你还行吗？还行的话来张经典图片，嘿嘿。。</font></p>
+<p><img src="https://camo.githubusercontent.com/356478f5341888f6f0d56c77b6492624fc2f252e/68747470733a2f2f7069632e7869616f68756f636861692e736974652f626c6f672f4a535f45434d415f6772616d6d65725f70726f746f2e706e67" alt="fhd "></p>
+<h3 id="自有属性和原型属性"><a href="#自有属性和原型属性" class="headerlink" title="自有属性和原型属性"></a>自有属性和原型属性</h3><p>每当代码读取某个对象的某个属性时，都会执行一次搜索，搜索顺序是先自有属性然后原型属性。即先从对象实例本身开始，如果在实例中找到了这个属性就返回对应的值，如果没有找到则再到原型对象上查找，查找到就该属性的值，若是没有的话就返回undefind.下面来举个例子说明：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.name = <span class="string">'乔乔'</span>;</span><br><span class="line">Person.prototype.age = <span class="number">16</span>;</span><br><span class="line">Person.prototype.job = <span class="string">'web前端工程师'</span>;</span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person();</span><br><span class="line">person1.sayName(); <span class="comment">//'乔乔';</span></span><br></pre></td></tr></table></figure>
 
-<p>  这种方法就是直接通过花括号包裹的键值对的形式来定义当前对象的。每两个属性值之间的通过逗号来进行分割。键和值之间通过冒号来分割。</p>
-</li>
-<li><p>使用Object.create()方法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.create(&#123;</span><br><span class="line">    name:<span class="string">'qyx'</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    job:<span class="string">'web开发工程师'</span>,</span><br><span class="line">    sayName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>分析：在我们调用person1.sayName()的时候，会执行两次搜索。<br>解析器：“实例person1有sayName属性吗？”<br>答：“没有”<br>解析器：“person1的原型有sayName属性吗”<br>答：“有”<br>于是，就读到原型对象中的函数。</p>
+<pre><code>扩展：原型最初只包含constructor属性，而该属性也是共享的，因此可以通过对象实例访问。</code></pre><p><font color="red">！注意</font>     </p>
+<p>可以通过对象实例访问保存在原型中的值，但不能通过对象实例重写原型中的值。    </p>
+<p>实例和原型中的属性同名时，该属性会自动屏蔽原型中的属性，选择实例中的属性，不过使用detele操作符可以完全删除实例属性，从而从新访问原型中的属性。  </p>
+<p>使用hasOwnPrototy()方法可以检测一个属性是否存在于实例中，若实例中存在，则返回true。如果我们想要知道某个属性是否在原型上，就需要自己写一个函数：</p>
+<pre><code>const hasPrototypeProperty=(obj,key)=&gt;(key in obj)&amp;&amp;(!obj.hasOwnProperty(key))</code></pre><p>代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line">Person.prototype.name = <span class="string">'qiaoqiao'</span>;</span><br><span class="line">Person.prototype.age = <span class="number">18</span>;</span><br><span class="line">Person.prototype.job = <span class="string">'前端'</span>;</span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line">person1.name = <span class="string">'xiaomin'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person1.name); <span class="comment">//xiaomin   来自实例</span></span><br><span class="line"><span class="built_in">console</span>.log(person2.name);<span class="comment">//qiaoqiao   来自原型</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person1.hasOwnPrototy(name));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(person2.hasOwnPrototy(name));<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">detele person1.name;</span><br><span class="line"><span class="built_in">console</span>.log(person1.name);<span class="comment">//qiaoqiao   来自原型</span></span><br></pre></td></tr></table></figure>
 
-<p>  这一方法是ECMAScript5中定义的一个内容，它是一个静态方法,传入的参数是一个对象，并且这一作用的对象将会作为新的对象的原型存在。</p>
-</li>
-</ul>
-<h2 id="属性类型"><a href="#属性类型" class="headerlink" title="属性类型"></a>属性类型</h2><p>ECMAscript中有两种属性：数据属性和访问器属性</p>
-<blockquote>
-<p>1.Object.defineProperty()方法接受三个参数：属性所在的对象、属性的名字和一个描述符对象。</p>
-<p>2.访问器属性不包含数据值，它们包含一对儿getter和setter 函数（非必须），在读取访问器属性时，会调用getter函数，这个函数负责返回有效的值；在写入访问器属性时，会调用setter函数并传入新值，这个函数负责决定如何处理数据。</p>
-<p>3.对象属性的类型可以是object，string，number，boolean，null和undefined。虽然字符串，数字，和布尔值虽然不是对象，但是性质和不可变对象类似的。</p>
-</blockquote>
+<pre><code>扩展：Object.getOwnPropertyDescriptor()方法只能用于实例属性。更多请自行百度哟！！</code></pre><h2 id="原型与in操作"><a href="#原型与in操作" class="headerlink" title="原型与in操作"></a>原型与in操作</h2><p>两种方法：<br>单独使用：无论是存在于实例中还是原型中，只要能访问到就会返回true。<br>for-in循环中使用:返回所有能够通过对象访问的、克枚举的属性，屏蔽了原型中的不可枚举的属性。</p>
+<p>Object.keys()方法接受一个对象作为参数，返回一个包含所有可枚举实例属性的字符串数组。<br>Object.getOwnPropertyNames()方法可以得到所有的实例属性，无论是否可枚举。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line">Person..prototype.name  = <span class="string">'qiaoqiao'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person();</span><br><span class="line">person1.hobby = <span class="string">'comic'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"name"</span> <span class="keyword">in</span> person1) ;   <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"hobby"</span> <span class="keyword">in</span> person1) ;   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="实例对象之间的关系"><a href="#实例对象之间的关系" class="headerlink" title="实例对象之间的关系"></a>实例对象之间的关系</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person1=<span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">const</span> person2=<span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line">person1==person2; <span class="comment">// false,这是因为在这里都指向不同的内存，&#123;&#125;===&#123;&#125; // false</span></span><br><span class="line"><span class="built_in">JSON</span>.stringify(person1)===<span class="built_in">JSON</span>.stringify(person2); <span class="comment">// true</span></span><br><span class="line">person1.constructor===person2.constructor; <span class="comment">// true 这里的构造函数都指向Person，所以为true</span></span><br><span class="line">person1.__proto__===person2.__proto__ ;<span class="comment">// 当然这个也为true</span></span><br><span class="line">person1.__proto__===Person.prototype ;<span class="comment">// true</span></span><br><span class="line"><span class="built_in">Object</span>.getPrototypeOf(person1)===<span class="built_in">Object</span>.getPrototypeOf(person2) ;<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="相关的原型语法"><a href="#相关的原型语法" class="headerlink" title="相关的原型语法"></a>相关的原型语法</h2><p>前面的例子中，原型的属性都是通过Person.prototype一个一个添加上去的，原型对象的constructor指向构造函数，其实也可以使用对象的字面量来重写整个原型的对象，但是重写之后的constructor已经不再指向构造函数，而是指向Object。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name:<span class="string">'qiaoqiao'</span>,</span><br><span class="line">    age:<span class="number">16</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="built_in">console</span>.log(obj <span class="keyword">instanceof</span> <span class="built_in">Object</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(obj <span class="keyword">instanceof</span> Person); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.constructor == Person); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.constructor == <span class="built_in">Object</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>虽然用instanceof操作符测试Object和Person仍然返回true，但是constuctor属性则等于Object而不等于Person了。如果constructor的值很重要的话，可以通过一下方式设置：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    <span class="keyword">constructor</span>:Person,</span><br><span class="line">    name:'qiaoqiao',</span><br><span class="line">    age:16</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>重写原型对象会切断现有原型与任何之前已经存在的对象实例之间的联系，它们的引用依然是最初的原型。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name:<span class="string">'qiaoqiao'</span>,</span><br><span class="line">    age:<span class="number">16</span>,</span><br><span class="line">    job:<span class="string">'前端'</span>,</span><br><span class="line">    sayName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.sayName(); <span class="comment">// error</span></span><br></pre></td></tr></table></figure>
+
+<h1 id><a href="#" class="headerlink" title></a><img src="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/07B5B6570C6E48E9AA5C33141E0FFACD/1430" alt="重写原型对象之前"></h1><p><img src="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/93110EEE8E8B4A11ABB0778B64366FBB/1432" alt="重写原型对象之后"></p>
 
       
     </div>
@@ -465,7 +462,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/08/12/理解对象/" title="理解对象">http://yoursite.com/2019/08/12/理解对象/</a>
+    <a href="http://yoursite.com/2019/08/16/原型和原型链/" title="原型和原型链">http://yoursite.com/2019/08/16/原型和原型链/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -488,12 +485,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Object/" rel="tag"><i class="fa fa-tag"></i>Object</a>
-          
-        </div>
-      
 
       
       
@@ -503,15 +494,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/08/15/面向对象的程序设计模式/" rel="next" title="面向对象的程序设计模式">
+                <i class="fa fa-chevron-left"></i> 面向对象的程序设计模式
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/15/面向对象的程序设计模式/" rel="prev" title="面向对象的程序设计模式">
-                面向对象的程序设计模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -695,7 +686,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是对象？"><span class="nav-number">1.</span> <span class="nav-text">什么是对象？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象的方式"><span class="nav-number">2.</span> <span class="nav-text">创建对象的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性类型"><span class="nav-number">3.</span> <span class="nav-text">属性类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#理解原型对象"><span class="nav-number">1.</span> <span class="nav-text">理解原型对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype-和-proto-？"><span class="nav-number">1.1.</span> <span class="nav-text">prototype 和 __proto__ ？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自有属性和原型属性"><span class="nav-number">1.2.</span> <span class="nav-text">自有属性和原型属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型与in操作"><span class="nav-number">2.</span> <span class="nav-text">原型与in操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例对象之间的关系"><span class="nav-number">3.</span> <span class="nav-text">实例对象之间的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关的原型语法"><span class="nav-number">4.</span> <span class="nav-text">相关的原型语法</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text"></span></a></li></div>
             
 
           </div>
