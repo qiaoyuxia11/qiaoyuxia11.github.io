@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[继承]]></title>
+    <url>%2F2019%2F08%2F20%2F%E7%BB%A7%E6%89%BF%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[原型链]]></title>
     <url>%2F2019%2F08%2F19%2F%E5%8E%9F%E5%9E%8B%E9%93%BE%2F</url>
     <content type="text"><![CDATA[如果说上次说原型就让你吐血了，那这篇原型链可能让你马上气绝身亡。 哈哈哈。。。其实原型链这个家伙，说难很难，说简单也简单，接下来就让我来说道说道，准备好救心丸！！！！原型链的顶层就是Object.prototype，而这个对象的是没有原型对象的，在chrome控制台中输入Object.__proto__，输出是ƒ () { }，一个空的函数。 原型链思考：如果我们让一个原型对象等于另外一个构造函数的实例，结果会怎样？代码： 123456789101112131415161718192021function A()&#123; this.name = 'qiaoqiao';&#125;;A.prototype.getName = function()&#123; return this.name;&#125;function B()&#123; this.age = 18;&#125;;//继承B.prototype = new A();B.prototype.getAge = function()&#123; return this.age;&#125;;var C = new B();console.log(C.getName()); // qiaoqiao 分析： 原型链的概念：就是依赖对象的proto的指向，当查找实例自身不存在的属性时，就一层层的往创建对象的构造函数上查找，直至到Object时，就没有proto指向了。 简单的分析： 12345function Person(name)&#123; this.name = name; &#125; var p = new Person();//p ---&gt; Person.prototype ---&gt;Object.prototype----&gt;null 属性查找规则: 当访问一个对象的属性的时候，会先在自身查找有没有,如果找到直接使用，如果没有找到，则去原型链指向的对象的构造函数的prototype中找，找到直接使用，没找到就返回undifined或报错。 事实上前面的例子中少了一环，所有引用类型默认都继承了Object,而这个继承是通过原型链继承实现的，只需要记住：所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.prototype。这也正是所有自定义类型都会继承toString()、valueOf()等默认方法的根本原因。 例子中完整的原型链： 确定原型和实例的关系： 第一种方法：使用instanceof操作符。 123console.log(C instanceOf Object); //trueconsole.log(C instanceOf A); //trueconsole.log(C instanceOf B); //true 第二种方法：使用isPrototyepOf()方法。 123console.log(Object.prototype.isPrototypeOf(C)); //trueconsole.log(A.prototype.isPrototypeOf(C)); //trueconsole.log(B.prototype.isPrototypeOf(C)); //true 由于原型链的关系，C是Object、A或B中任何一个类型的实例。 注意：在通过原型链实现继承时，不能使用对象字面量创建原型方法。]]></content>
