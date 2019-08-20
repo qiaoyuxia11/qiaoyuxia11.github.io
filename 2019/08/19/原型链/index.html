@@ -90,8 +90,8 @@
 <meta property="og:description" content="如果说上次说原型就让你吐血了，那这篇原型链可能让你马上气绝身亡。 哈哈哈。。。其实原型链这个家伙，说难很难，说简单也简单，接下来就让我来说道说道，准备好救心丸！！！！原型链的顶层就是Object.prototype，而这个对象的是没有原型对象的，在chrome控制台中输入Object.__proto__，输出是ƒ () {  }，一个空的函数。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/08/19/原型链/yuanxinglian1.png">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/0EE004ABC3384F10BEDEC30D35BCF41C/1503">
-<meta property="og:updated_time" content="2019-08-20T10:28:58.000Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/19/原型链/yuanxinglian2.png">
+<meta property="og:updated_time" content="2019-08-20T10:35:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原型链">
 <meta name="twitter:description" content="如果说上次说原型就让你吐血了，那这篇原型链可能让你马上气绝身亡。 哈哈哈。。。其实原型链这个家伙，说难很难，说简单也简单，接下来就让我来说道说道，准备好救心丸！！！！原型链的顶层就是Object.prototype，而这个对象的是没有原型对象的，在chrome控制台中输入Object.__proto__，输出是ƒ () {  }，一个空的函数。">
@@ -434,7 +434,7 @@
 <p><font color="red">属性查找规则:</font></p>
 <p> 当访问一个对象的属性的时候，会先在自身查找有没有,如果找到直接使用，如果没有找到，则去原型链指向的对象的构造函数的prototype中找，找到直接使用，没找到就返回undifined或报错。</p>
 <p>事实上前面的例子中少了一环，所有引用类型默认都继承了Object,而这个继承是通过原型链继承实现的，只需要记住：所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.prototype。这也正是所有自定义类型都会继承toString()、valueOf()等默认方法的根本原因。</p>
-<p>例子中完整的原型链：<br> <img src="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/0EE004ABC3384F10BEDEC30D35BCF41C/1503" alt="完整的原型链结构"></p>
+<p>例子中完整的原型链：<br> <img src="/2019/08/19/原型链/yuanxinglian2.png" alt="完整的原型链结构"></p>
 <h2 id="确定原型和实例的关系："><a href="#确定原型和实例的关系：" class="headerlink" title="确定原型和实例的关系："></a>确定原型和实例的关系：</h2><p> 第一种方法：使用instanceof操作符。<br> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(C instanceOf <span class="built_in">Object</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(C instanceOf A); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(C instanceOf B); <span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
 <p> 第二种方法：使用isPrototyepOf()方法。<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.isPrototypeOf(C)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(A.prototype.isPrototypeOf(C)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(B.prototype.isPrototypeOf(C)); <span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
 <p> 由于原型链的关系，C是Object、A或B中任何一个类型的实例。</p>
