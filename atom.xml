@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-20T09:55:40.000Z</updated>
+  <updated>2019-08-28T08:17:33.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,21 @@
     <link href="http://yoursite.com/2019/08/20/%E7%BB%A7%E6%89%BF/"/>
     <id>http://yoursite.com/2019/08/20/继承/</id>
     <published>2019-08-20T09:55:40.000Z</published>
-    <updated>2019-08-20T09:55:40.000Z</updated>
+    <updated>2019-08-28T08:17:33.000Z</updated>
     
     <summary type="html">
     
+      &lt;hr&gt;
+&lt;p&gt;什么是继承？就是获取存在对象已有属性和方法的一种方式。 &lt;/p&gt;
+&lt;p&gt;由于函数没有签名，在 ECMAScript 中无法实现接口继承，因此，ECMAScript只支持实现继承，而实现继承主要是依靠原型链实现的，基本思想是利用原型让一个引用类型继承另一个引用类型的属性和方法。  &lt;/p&gt;
+&lt;p&gt;简单的回顾一下构造函数、原型和实例的关系：每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。&lt;/p&gt;
+    
     </summary>
     
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+      <category term="Object" scheme="http://yoursite.com/tags/Object/"/>
     
   </entry>
   
