@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-28T08:49:07.000Z</updated>
+  <updated>2019-08-29T03:17:29.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写在react源码学习前的破烂话</title>
+    <link href="http://yoursite.com/2019/08/29/%E5%86%99%E5%9C%A8react%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%9A%84%E7%A0%B4%E7%83%82%E8%AF%9D/"/>
+    <id>http://yoursite.com/2019/08/29/写在react源码学习前的破烂话/</id>
+    <published>2019-08-29T03:16:26.000Z</published>
+    <updated>2019-08-29T03:17:29.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;看react的源码这个事情，我从2018年就开始计划，但是到2019年的9月份，这个事情依然是断断续续的，看了一些也是一知半解的，有时候我觉得自己才入门，但是有时候我又觉得自己没有入门，反正不管有没有入门，爱过还是恨过，过去的就过去吧，以前的就算翻篇了，从现在开始
+        
+      
+    
+    </summary>
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="React源码学习" scheme="http://yoursite.com/tags/React%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>继承</title>

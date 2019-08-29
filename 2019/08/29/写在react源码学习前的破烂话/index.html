@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="React源码学习,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="关于站长我叫乔乔，女，是一名web前端开发工程师，来自山西大同，小逗逼一枚，我比较独立，但是我不是女汉子哦。 我是个精致的🐷🐷女孩，特别爱笑，哈哈哈哈哈。。。。。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="乔乔">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="看react的源码这个事情，我从2018年就开始计划，但是到2019年的9月份，这个事情依然是断断续续的，看了一些也是一知半解的，有时候我觉得自己才入门，但是有时候我又觉得自己没有入门，反正不管有没有入门，爱过还是恨过，过去的就过去吧，以前的就算翻篇了，从现在开始一步一步的重新来过，我会边看边总结下来的，和我一起来对react’爱爱～爱不完。。。’，忽然想起一句歌词，‘我想要和你谈恋爱，这算不算">
+<meta name="keywords" content="React源码学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写在react源码学习前的破烂话">
+<meta property="og:url" content="http://yoursite.com/2019/08/29/写在react源码学习前的破烂话/index.html">
 <meta property="og:site_name" content="喬喬">
-<meta property="og:description" content="关于站长我叫乔乔，女，是一名web前端开发工程师，来自山西大同，小逗逼一枚，我比较独立，但是我不是女汉子哦。 我是个精致的🐷🐷女孩，特别爱笑，哈哈哈哈哈。。。。。">
+<meta property="og:description" content="看react的源码这个事情，我从2018年就开始计划，但是到2019年的9月份，这个事情依然是断断续续的，看了一些也是一知半解的，有时候我觉得自己才入门，但是有时候我又觉得自己没有入门，反正不管有没有入门，爱过还是恨过，过去的就过去吧，以前的就算翻篇了，从现在开始一步一步的重新来过，我会边看边总结下来的，和我一起来对react’爱爱～爱不完。。。’，忽然想起一句歌词，‘我想要和你谈恋爱，这算不算">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-13T01:15:43.000Z">
+<meta property="og:updated_time" content="2019-08-29T03:17:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="乔乔">
-<meta name="twitter:description" content="关于站长我叫乔乔，女，是一名web前端开发工程师，来自山西大同，小逗逼一枚，我比较独立，但是我不是女汉子哦。 我是个精致的🐷🐷女孩，特别爱笑，哈哈哈哈哈。。。。。">
+<meta name="twitter:title" content="写在react源码学习前的破烂话">
+<meta name="twitter:description" content="看react的源码这个事情，我从2018年就开始计划，但是到2019年的9月份，这个事情依然是断断续续的，看了一些也是一知半解的，有时候我觉得自己才入门，但是有时候我又觉得自己没有入门，反正不管有没有入门，爱过还是恨过，过去的就过去吧，以前的就算翻篇了，从现在开始一步一步的重新来过，我会边看边总结下来的，和我一起来对react’爱爱～爱不完。。。’，忽然想起一句歌词，‘我想要和你谈恋爱，这算不算">
 
 
 
@@ -125,7 +126,7 @@
 
 
 
-  <title>乔乔 | 喬喬</title>
+  <title>写在react源码学习前的破烂话 | 喬喬</title>
   
 
 
@@ -282,35 +283,235 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/29/写在react源码学习前的破烂话/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="乔乔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="喬喬">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">乔乔</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h2 id="关于站长"><a href="#关于站长" class="headerlink" title="关于站长"></a>关于站长</h2><p>我叫乔乔，女，是一名web前端开发工程师，来自山西大同，小逗逼一枚，我比较独立，但是我不是女汉子哦。</p>
-<p>我是个精致的🐷🐷女孩，特别爱笑，哈哈哈哈哈。。。。。</p>
-
+          <h1 class="post-title" itemprop="name headline">写在react源码学习前的破烂话</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-29T11:16:26+08:00">
+                2019-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  535
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <hr>
+<p>看react的源码这个事情，我从2018年就开始计划，但是到2019年的9月份，这个事情依然是断断续续的，看了一些也是一知半解的，有时候我觉得自己才入门，但是有时候我又觉得自己没有入门，反正不管有没有入门，爱过还是恨过，过去的就过去吧，以前的就算翻篇了，从现在开始一步一步的重新来过，我会边看边总结下来的，和我一起来对react’爱爱～爱不完。。。’，忽然想起一句歌词，‘我想要和你谈恋爱，这算不算表白，想要拉着你的手，再也不放开。。。’，有点扯哈，继续往下唠。</p>
+<p>我们为什么要学习react的源码呢？当然是因为太闲了呗～～～。开玩笑哈，其实看源码会有很多好处，首先，可以提高自身价值，开发能力，解决问题的能力，最主要的是可以升职加薪是不是呀？其次，可以提升你的学习能力，思考能力，设计能力等等好处。</p>
+<p>react是一个很有重量的框架，深受国内大公司的青睐，它的核心API就是setState,带来了很纯粹的开发体验。Fiber从根本上解决了js单线程运行如果计算量太大的话导致卡顿的问题。</p>
+<p>学习源码需要必备：</p>
+<ul>
+<li>足够的耐心</li>
+<li>思考思考再思考</li>
+<li>善于提问和笔记</li>
+</ul>
+<p>毕竟看源码不是看小说，不会用大白话给你写出来，它会比较枯燥，你需要有一定的耐心，要善于思考，多多总结，在接触一些新事物之前，最大的困难不是不理解，而是不知道，对于一个新概念，如果你不知道，那么你完全不会对它产生任何疑问，只有知道这个东西，并且开始想要理解的时候，才会产生各种各样的问题，去思考，去解决，就会收获，接下来让我们带着这样的❤️去开启源码学习之旅吧。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    乔乔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/08/29/写在react源码学习前的破烂话/" title="写在react源码学习前的破烂话">http://yoursite.com/2019/08/29/写在react源码学习前的破烂话/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，著作权归作者所有，转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div> 
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React源码学习/" rel="tag"><i class="fa fa-tag"></i>React源码学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/20/继承/" rel="next" title="继承">
+                <i class="fa fa-chevron-left"></i> 继承
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -319,6 +520,13 @@
 
 
           
+
+  
+        <div id="gitalk-container"></div>
+    </div>
+  
+
+
 
         </div>
         
@@ -339,17 +547,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -459,22 +658,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于站长"><span class="nav-number">1.</span> <span class="nav-text">关于站长</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -483,8 +666,8 @@
 
 
         
-      </div>
-    </main>
+      </main></div>
+    
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
@@ -541,7 +724,7 @@
 
     
 
-  </div>
+  
 
   
 
@@ -660,6 +843,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'bcc640408a5b09a8f3b7',
+          clientSecret: '676bd2e18630a252975edba8f6cefc45b8a77e34',
+          repo: 'qiaoyuxia11.github.io',
+          owner: 'qiaoyuxia11',
+          admin: ['qiaoyuxia11'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   
