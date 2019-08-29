@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="React源码学习,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="白茶清欢无别事，我在等风也等你">
-<meta property="og:type" content="website">
-<meta property="og:title" content="喬喬">
-<meta property="og:url" content="http://yoursite.com/categories/react/index.html">
+<meta name="description" content="将react作为核心架构的人很多，但其实很多人都不知道react到底是个什么东东。如果你去看源码会发现，react的源码只有1000多行，儿react-dom却有近2W行，你的眼睛是好的，没有看错，大部分的架构逻辑都在react-dom当中，那么react到底是个什么东东呢？？？">
+<meta name="keywords" content="React源码学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React API">
+<meta property="og:url" content="http://yoursite.com/2019/08/29/React-API/index.html">
 <meta property="og:site_name" content="喬喬">
-<meta property="og:description" content="白茶清欢无别事，我在等风也等你">
+<meta property="og:description" content="将react作为核心架构的人很多，但其实很多人都不知道react到底是个什么东东。如果你去看源码会发现，react的源码只有1000多行，儿react-dom却有近2W行，你的眼睛是好的，没有看错，大部分的架构逻辑都在react-dom当中，那么react到底是个什么东东呢？？？">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-29T08:55:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="喬喬">
-<meta name="twitter:description" content="白茶清欢无别事，我在等风也等你">
+<meta name="twitter:title" content="React API">
+<meta name="twitter:description" content="将react作为核心架构的人很多，但其实很多人都不知道react到底是个什么东东。如果你去看源码会发现，react的源码只有1000多行，儿react-dom却有近2W行，你的眼睛是好的，没有看错，大部分的架构逻辑都在react-dom当中，那么react到底是个什么东东呢？？？">
 
 
 
@@ -124,7 +126,7 @@
 
 
 
-  <title>分类: react | 喬喬</title>
+  <title>React API | 喬喬</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,79 +281,259 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>react<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/29/React-API/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="乔乔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="喬喬">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/29/React-API/" itemprop="url">
-              
-                <span itemprop="name">React API</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">React API</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-29T16:53:14+08:00" content="2019-08-29">
-          08-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-29T16:53:14+08:00">
+                2019-08-29
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <hr>
+<p>将react作为核心架构的人很多，但其实很多人都不知道react到底是个什么东东。如果你去看源码会发现，react的源码只有1000多行，儿react-dom却有近2W行，你的眼睛是好的，没有看错，大部分的架构逻辑都在react-dom当中，那么react到底是个什么东东呢？？？</p>
+<a id="more"></a>
+<p><font color="red">注意：</font>我贴的代码都是16版本以后的。</p>
+<p>我们先来看一下React暴露出来的API。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//packages/react/src/React.js</span></span><br><span class="line"><span class="comment">//声明一个react对象</span></span><br><span class="line"><span class="keyword">const</span> React = &#123;</span><br><span class="line">  Children: &#123;</span><br><span class="line">    map,</span><br><span class="line">    forEach,</span><br><span class="line">    count,</span><br><span class="line">    toArray,</span><br><span class="line">    only,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  createRef,</span><br><span class="line">  Component,</span><br><span class="line">  PureComponent,</span><br><span class="line"></span><br><span class="line">  createContext,</span><br><span class="line">  forwardRef,</span><br><span class="line">  lazy,</span><br><span class="line">  memo,</span><br><span class="line">  </span><br><span class="line">  Fragment: REACT_FRAGMENT_TYPE,</span><br><span class="line">  StrictMode: REACT_STRICT_MODE_TYPE,</span><br><span class="line">  Suspense: REACT_SUSPENSE_TYPE,</span><br><span class="line"></span><br><span class="line">  createElement: __DEV__ ? createElementWithValidation : createElement,</span><br><span class="line">  cloneElement: __DEV__ ? cloneElementWithValidation : cloneElement,</span><br><span class="line">  createFactory: __DEV__ ? createFactoryWithValidation : createFactory,</span><br><span class="line">  isValidElement: isValidElement,</span><br><span class="line"></span><br><span class="line">  version: ReactVersion,</span><br><span class="line"></span><br><span class="line">  __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: ReactSharedInternals,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/29/写在react源码学习前的破烂话/" itemprop="url">
-              
-                <span itemprop="name">写在react源码学习前的破烂话</span>
-              
-            </a>
-        
-      </h2>
+<h1 id="Children"><a href="#Children" class="headerlink" title="Children"></a>Children</h1><p>这个对象提供了一堆帮你处理props.children的方法，因为children是一个类似数组但不是数组的数据结构，如果要对其进行处理，可以使用React.Children外挂的方法。</p>
+<h1 id="createRef"><a href="#createRef" class="headerlink" title="createRef"></a>createRef</h1><p>新的ref用法，React即将抛弃<div ref="myDiv">这种string ref的用法，将来你只能使用两种方法来使用ref</div></p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  constructor() &#123;</span><br><span class="line">    <span class="keyword">this</span>.ref = <span class="type">React</span>.createRef()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;div ref=&#123;<span class="keyword">this</span>.ref&#125; /&gt;</span><br><span class="line">    <span class="comment">// or</span></span><br><span class="line">    <span class="keyword">return</span> &lt;div ref=&#123;(node) =&gt; <span class="keyword">this</span>.funRef = node&#125; /&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-29T11:16:26+08:00" content="2019-08-29">
-          08-29
-        </time>
-      </div>
+<h1 id="Component-amp-PureComponent-这两个类基本相同，唯一的区别是PureComponent-的原型上多了一个标识。"><a href="#Component-amp-PureComponent-这两个类基本相同，唯一的区别是PureComponent-的原型上多了一个标识。" class="headerlink" title="Component&amp;PureComponent 这两个类基本相同，唯一的区别是PureComponent 的原型上多了一个标识。"></a>Component&amp;PureComponent 这两个类基本相同，唯一的区别是PureComponent 的原型上多了一个标识。</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (ctor.prototype &amp;&amp; ctor.prototype.isPureReactComponent) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    !shallowEqual(oldProps, newProps) || !shallowEqual(oldState, newState)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
+<p>这是检查组件是否需要更新的一个判断，ctor就是你声明的继承自Component or PureComponent的类，他会判断你是否继承自PureComponent，如果是的话就shallowEqual比较state和props。</p>
+<pre><code>注意：React中对比一个ClassComponent是否需要更新，只有两个地方。一是看有没有shouldComponentUpdate方法，二就是这里的PureComponent判断</code></pre><h1 id="createContext"><a href="#createContext" class="headerlink" title="createContext"></a>createContext</h1><p>createContext是官方定稿的context方案，在这之前我们一直在用的老的context API都是React不推荐的API，现在新的API释出，官方也已经确定在17大版本会把老API去除。</p>
+<p>新API的使用方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; Provider, Consumer &#125; = React.createContext(<span class="string">'defaultValue'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ProviderComp = <span class="function">(<span class="params">props</span>) =&gt;</span> (</span><br><span class="line">  &lt;Provider value=&#123;<span class="string">'realValue'</span>&#125;&gt;</span><br><span class="line">    &#123;props.children&#125;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const ConsumerComp = () =&gt; (</span></span><br><span class="line"><span class="regexp">  &lt;Consumer&gt;</span></span><br><span class="line"><span class="regexp">    &#123;(value) =&gt; &lt;p&gt;&#123;value&#125;&lt;/</span>p&gt;&#125;</span><br><span class="line">  &lt;<span class="regexp">/Consumber&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
 
+<p>后面讲context会专门比较新老的API的差异，提前说一句，老API的性能不是一般的差</p>
+<h1 id="forwardRef"><a href="#forwardRef" class="headerlink" title="forwardRef"></a>forwardRef</h1><p>forwardRef是用来解决HOC组件传递ref的问题的，所谓HOC就是Higher Order Component，比如使用redux的时候，我们用connect来给组件绑定需要的state，这其中其实就是给我们的组件在外部包了一层组件，然后通过…props的方式把外部的props传入到实际组件。forwardRef的使用方法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> TargetComponent = React.forwardRef(<span class="function">(<span class="params">props, ref</span>) =&gt;</span> (</span><br><span class="line">  &lt;TargetComponent ref=&#123;ref&#125; /&gt;</span><br><span class="line">))</span><br></pre></td></tr></table></figure>
+
+<p>这也是为什么要提供createRef作为新的ref使用方法的原因，如果用string ref就没法当作参数传递了。</p>
+<p>这里只是简单说一下使用方法，后面讲ref的时候会详细分析。</p>
+<h1 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h1><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Fragment:</span> REACT_FRAGMENT_TYPE,</span><br><span class="line"><span class="symbol">StrictMode:</span> REACT_STRICT_MODE_TYPE,</span><br><span class="line"><span class="symbol">unstable_AsyncMode:</span> REACT_ASYNC_MODE_TYPE,</span><br><span class="line"><span class="symbol">unstable_Profiler:</span> REACT_PROFILER_TYPE,</span><br></pre></td></tr></table></figure>
+
+<p>这四个都是React提供的组件，但他们呢其实都只是占位符，都是一个Symbol，在React实际检测到他们的时候会做一些特殊的处理，比如StrictMode和AsyncMode会让他们的子节点对应的Fiber的mode都变成和他们一样的mode</p>
+<h1 id="createElement-amp-cloneElement-amp-createFactory-amp-isValidElement"><a href="#createElement-amp-cloneElement-amp-createFactory-amp-isValidElement" class="headerlink" title="createElement &amp; cloneElement &amp; createFactory &amp; isValidElement"></a>createElement &amp; cloneElement &amp; createFactory &amp; isValidElement</h1><p>createElement可谓是React中最重要的API了，他是用来创建ReactElement的，但是很多同学却从没见过也没用过，这是为啥呢？因为你用了JSX，JSX并不是标准的js，所以要经过编译才能变成可运行的js，而编译之后，createElement就出现了：</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jsx</span></span><br><span class="line">&lt;div id=<span class="string">"app"</span>&gt;content&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="type">React</span>.createElement(<span class="symbol">'di</span>v', &#123; id: <span class="symbol">'ap</span>p' &#125;, <span class="symbol">'conten</span>t')</span><br><span class="line">cloneElement就很明显了，是用来克隆一个<span class="type">ReactElement</span>的</span><br><span class="line"></span><br><span class="line">createFactory是用来创建专门用来创建某一类<span class="type">ReactElement</span>的工厂的，</span><br><span class="line"></span><br><span class="line">export function createFactory(<span class="class"><span class="keyword">type</span>) </span>&#123;</span><br><span class="line">  const factory = createElement.bind(<span class="literal">null</span>, <span class="class"><span class="keyword">type</span>)</span>;</span><br><span class="line">  factory.<span class="keyword">type</span> = <span class="class"><span class="keyword">type</span></span>;</span><br><span class="line">  <span class="keyword">return</span> factory;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>他其实就是绑定了第一个参数的createElement，一般我们用JSX进行编程的时候不会用到这个API</p>
+<p>isValidElement顾名思义就是用来验证是否是一个ReactElement的，基本也用不太到</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    乔乔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/08/29/React-API/" title="React API">http://yoursite.com/2019/08/29/React-API/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，著作权归作者所有，转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div> 
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React源码学习/" rel="tag"><i class="fa fa-tag"></i>React源码学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/29/写在react源码学习前的破烂话/" rel="next" title="写在react源码学习前的破烂话">
+                <i class="fa fa-chevron-left"></i> 写在react源码学习前的破烂话
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -359,6 +541,13 @@
 
 
           
+
+  
+        <div id="gitalk-container"></div>
+    </div>
+  
+
+
 
         </div>
         
@@ -379,8 +568,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -490,6 +688,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Children"><span class="nav-number">1.</span> <span class="nav-text">Children</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#createRef"><span class="nav-number">2.</span> <span class="nav-text">createRef</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Component-amp-PureComponent-这两个类基本相同，唯一的区别是PureComponent-的原型上多了一个标识。"><span class="nav-number">3.</span> <span class="nav-text">Component&amp;PureComponent 这两个类基本相同，唯一的区别是PureComponent 的原型上多了一个标识。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#createContext"><span class="nav-number">4.</span> <span class="nav-text">createContext</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#forwardRef"><span class="nav-number">5.</span> <span class="nav-text">forwardRef</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类型"><span class="nav-number">6.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#createElement-amp-cloneElement-amp-createFactory-amp-isValidElement"><span class="nav-number">7.</span> <span class="nav-text">createElement &amp; cloneElement &amp; createFactory &amp; isValidElement</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -498,8 +712,8 @@
 
 
         
-      </div>
-    </main>
+      </main></div>
+    
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
@@ -556,7 +770,7 @@
 
     
 
-  </div>
+  
 
   
 
@@ -631,6 +845,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -671,6 +889,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'bcc640408a5b09a8f3b7',
+          clientSecret: '676bd2e18630a252975edba8f6cefc45b8a77e34',
+          repo: 'qiaoyuxia11.github.io',
+          owner: 'qiaoyuxia11',
+          admin: ['qiaoyuxia11'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   

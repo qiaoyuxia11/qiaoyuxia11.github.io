@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-29T03:17:29.000Z</updated>
+  <updated>2019-08-29T08:55:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React API</title>
+    <link href="http://yoursite.com/2019/08/29/React-API/"/>
+    <id>http://yoursite.com/2019/08/29/React-API/</id>
+    <published>2019-08-29T08:53:14.000Z</published>
+    <updated>2019-08-29T08:55:03.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;将react作为核心架构的人很多，但其实很多人都不知道react到底是个什么东东。如果你去看源码会发现，react的源码只有1000多行，儿react-dom却有近2W行，你的眼睛是好的，没有看错，大部分的架构逻辑都在react-dom当中，那么react到底是个什么东东呢？？？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="React源码学习" scheme="http://yoursite.com/tags/React%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>写在react源码学习前的破烂话</title>
