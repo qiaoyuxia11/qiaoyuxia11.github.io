@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-02T07:22:49.000Z</updated>
+  <updated>2019-09-03T07:46:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>React源码解析之Component和PureComponent</title>
+    <link href="http://yoursite.com/2019/09/03/React%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8BComponent%E5%92%8CPureComponent/"/>
+    <id>http://yoursite.com/2019/09/03/React源码解析之Component和PureComponent/</id>
+    <published>2019-09-03T07:46:03.000Z</published>
+    <updated>2019-09-03T07:46:22.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="React源码学习" scheme="http://yoursite.com/tags/React%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>React源码解析之ReactElement</title>
     <link href="http://yoursite.com/2019/08/29/React%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8BReactElement/"/>
     <id>http://yoursite.com/2019/08/29/React源码解析之ReactElement/</id>
     <published>2019-08-29T09:56:17.000Z</published>
-    <updated>2019-09-02T07:22:49.000Z</updated>
+    <updated>2019-09-03T03:41:24.000Z</updated>
     
     <summary type="html">
     
@@ -42,7 +69,7 @@
     <link href="http://yoursite.com/2019/08/29/React-API/"/>
     <id>http://yoursite.com/2019/08/29/React-API/</id>
     <published>2019-08-29T08:53:14.000Z</published>
-    <updated>2019-08-29T08:55:03.000Z</updated>
+    <updated>2019-09-03T07:43:37.000Z</updated>
     
     <summary type="html">
     
@@ -155,7 +182,7 @@
     <link href="http://yoursite.com/2019/08/15/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>http://yoursite.com/2019/08/15/面向对象的程序设计模式/</id>
     <published>2019-08-15T02:58:55.000Z</published>
-    <updated>2019-08-15T03:25:26.000Z</updated>
+    <updated>2019-09-03T03:40:42.000Z</updated>
     
     <summary type="html">
     
