@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="喬喬">
 <meta property="og:description" content="默认渲染行为在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-03T09:26:06.000Z">
+<meta property="og:updated_time" content="2019-09-03T09:36:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React源码解析之Component和PureComponent">
 <meta name="twitter:description" content="默认渲染行为在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数">
@@ -417,6 +417,7 @@
       
         <hr>
 <h1 id="默认渲染行为"><a href="#默认渲染行为" class="headerlink" title="默认渲染行为"></a>默认渲染行为</h1><p>在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数据的改变导致重绘，这极大的降低了React的渲染效率。（这里的更新不更新，其实说的是执不执行render函数，如果不执行render函数，那自然该组件和其子组件都不会重新渲染啦）</p>
+<a id="more"></a>
 <p>重写shouldComponentUpdate可以提升性能，它是在重新渲染过程开始欠触发的。当你明确知道组件不需要更新的时候，在该生命周期内返回false就行啦！</p>
 <p>比如下面的例子中，任何options的变化，甚至是其他数据的变化都可能导致所有cell的重绘。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Table Component</span></span><br><span class="line">&#123;<span class="keyword">this</span>.props.items.map(<span class="function"><span class="params">i</span> =&gt;</span></span><br><span class="line">    &lt;Cell data=&#123;i&#125; option=&#123;<span class="keyword">this</span>.props.options[i]&#125; /&gt;</span><br><span class="line">)&#125;</span><br></pre></td></tr></table></figure>

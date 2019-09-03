@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-03T09:26:06.000Z</updated>
+  <updated>2019-09-03T09:36:25.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,18 +21,12 @@
     <link href="http://yoursite.com/2019/09/03/React%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8BComponent%E5%92%8CPureComponent/"/>
     <id>http://yoursite.com/2019/09/03/React源码解析之Component和PureComponent/</id>
     <published>2019-09-03T07:46:03.000Z</published>
-    <updated>2019-09-03T09:26:06.000Z</updated>
+    <updated>2019-09-03T09:36:25.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;hr&gt;
-&lt;h1 id=&quot;默认渲染行为&quot;&gt;&lt;a href=&quot;#默认渲染行为&quot; class=&quot;headerlink&quot; title=&quot;默认渲染行为&quot;&gt;&lt;/a&gt;默认渲染行为&lt;/h1&gt;&lt;p&gt;在React
-        
-      
+      &lt;hr&gt;
+&lt;h1 id=&quot;默认渲染行为&quot;&gt;&lt;a href=&quot;#默认渲染行为&quot; class=&quot;headerlink&quot; title=&quot;默认渲染行为&quot;&gt;&lt;/a&gt;默认渲染行为&lt;/h1&gt;&lt;p&gt;在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数据的改变导致重绘，这极大的降低了React的渲染效率。（这里的更新不更新，其实说的是执不执行render函数，如果不执行render函数，那自然该组件和其子组件都不会重新渲染啦）&lt;/p&gt;
     
     </summary>
     
