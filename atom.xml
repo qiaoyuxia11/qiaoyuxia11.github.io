@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-03T07:46:22.000Z</updated>
+  <updated>2019-09-03T09:26:06.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/09/03/React%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B9%8BComponent%E5%92%8CPureComponent/"/>
     <id>http://yoursite.com/2019/09/03/React源码解析之Component和PureComponent/</id>
     <published>2019-09-03T07:46:03.000Z</published>
-    <updated>2019-09-03T07:46:22.000Z</updated>
+    <updated>2019-09-03T09:26:06.000Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,7 @@
         
         
           &lt;hr&gt;
-
+&lt;h1 id=&quot;默认渲染行为&quot;&gt;&lt;a href=&quot;#默认渲染行为&quot; class=&quot;headerlink&quot; title=&quot;默认渲染行为&quot;&gt;&lt;/a&gt;默认渲染行为&lt;/h1&gt;&lt;p&gt;在React
         
       
     

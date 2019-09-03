@@ -81,15 +81,18 @@
 
 
 
+<meta name="description" content="默认渲染行为在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数">
 <meta name="keywords" content="React源码学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React源码解析之Component和PureComponent">
 <meta property="og:url" content="http://yoursite.com/2019/09/03/React源码解析之Component和PureComponent/index.html">
 <meta property="og:site_name" content="喬喬">
+<meta property="og:description" content="默认渲染行为在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-03T07:46:22.000Z">
+<meta property="og:updated_time" content="2019-09-03T09:26:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React源码解析之Component和PureComponent">
+<meta name="twitter:description" content="默认渲染行为在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数">
 
 
 
@@ -375,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  1.4k
                 </span>
               
 
@@ -391,7 +394,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  6
                 </span>
               
             </div>
@@ -413,6 +416,50 @@
 
       
         <hr>
+<h1 id="默认渲染行为"><a href="#默认渲染行为" class="headerlink" title="默认渲染行为"></a>默认渲染行为</h1><p>在React Component的生命周期中，有一个shouldComponentUpdate方法，这个方法是用来控制组件是否被更新的，返回为true的话，则当props或state改变的时候进行更新，如果返回false，当props或state改变的时候不更新，默认返回值是true，这就意味着就算没有改变组件的props或state，也会导致组件的重绘。这就经常导致组件因为不相关数据的改变导致重绘，这极大的降低了React的渲染效率。（这里的更新不更新，其实说的是执不执行render函数，如果不执行render函数，那自然该组件和其子组件都不会重新渲染啦）</p>
+<p>重写shouldComponentUpdate可以提升性能，它是在重新渲染过程开始欠触发的。当你明确知道组件不需要更新的时候，在该生命周期内返回false就行啦！</p>
+<p>比如下面的例子中，任何options的变化，甚至是其他数据的变化都可能导致所有cell的重绘。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Table Component</span></span><br><span class="line">&#123;<span class="keyword">this</span>.props.items.map(<span class="function"><span class="params">i</span> =&gt;</span></span><br><span class="line">    &lt;Cell data=&#123;i&#125; option=&#123;<span class="keyword">this</span>.props.options[i]&#125; /&gt;</span><br><span class="line">)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>重写shouldComponentUpdate的例子：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CounterButton</span> <span class="title">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">        <span class="keyword">this</span>.state = &#123;count: <span class="number">1</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    shouldComponentUpdate(nextProps, nextState) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.props.color !== nextProps.color) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.state.count !== nextState.count) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;button</span><br><span class="line">                color=&#123;<span class="keyword">this</span>.props.color&#125;</span><br><span class="line">                onClick=&#123;() =&gt; <span class="keyword">this</span>.setState(state =&gt; (&#123;count: state.count + <span class="number">1</span>&#125;))&#125;</span><br><span class="line">            &gt;</span><br><span class="line">                Count: &#123;<span class="keyword">this</span>.state.count&#125;</span><br><span class="line">            &lt;/button&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="React-Component-与-React-PureComponent"><a href="#React-Component-与-React-PureComponent" class="headerlink" title="React.Component 与 React.PureComponent"></a>React.Component 与 React.PureComponent</h1><p>通常情况下，我们会使用ES6的class关键字来创建React组件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// some codes here ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是，你也可以创建一个继承React.PureComponent的React组件，就像这样:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">PureComponent</span> </span>&#123;</span><br><span class="line">    <span class="comment">// some codes here</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么，问题来了，这两种方式有什么区别呢？</p>
+<p>1.不能再重写shouldComponentUpdate，否则会引发警告(报错截图就不贴了，怪麻烦的)</p>
+<pre><code>Warning: ListOfWords has a method called shouldComponentUpdate(). shouldComponentUpdate should not be used when extending React.PureComponent. Please extend React.Component if shouldComponentUpdate is used.</code></pre><p>2.继承PureComponent时，进行的是浅比较，也就是说，如果是引用类型的数据，只会比较是不是同一个地址，而不会比较具体这个地址存的数据是否完全一致</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListOfWords</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">PureComponent</span> </span>&#123;</span><br><span class="line"> render() &#123;</span><br><span class="line">     <span class="keyword">return</span> &lt;div&gt;&#123;<span class="keyword">this</span>.props.words.join(',')&#125;&lt;/div&gt;;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WordAdder</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line"> constructor(props) &#123;</span><br><span class="line">     <span class="keyword">super</span>(props);</span><br><span class="line">     <span class="keyword">this</span>.state = &#123;</span><br><span class="line">         words: [<span class="symbol">'markla</span>r']</span><br><span class="line">     &#125;;</span><br><span class="line">     <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> handleClick() &#123;</span><br><span class="line">     <span class="comment">// This section is bad style and causes a bug</span></span><br><span class="line">     const words = <span class="keyword">this</span>.state.words;</span><br><span class="line">     words.push(<span class="symbol">'markla</span>r');</span><br><span class="line">     <span class="keyword">this</span>.setState(&#123;words: words&#125;);</span><br><span class="line"> &#125;</span><br><span class="line"> render() &#123;</span><br><span class="line">     <span class="keyword">return</span> (</span><br><span class="line">         &lt;div&gt;</span><br><span class="line">             &lt;button onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;click&lt;/button&gt;</span><br><span class="line">             &lt;<span class="type">ListOfWords</span> words=&#123;<span class="keyword">this</span>.state.words&#125; /&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">     );</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，无论你怎么点击按钮，ListOfWords渲染的结果始终没变化，原因就是WordAdder的word的引用地址始终是同一个。</p>
+<p>3.浅比较会忽略属性或状态突变的情况，其实也就是，数据引用指针没变而数据被改变的时候，也不新渲染组件。但其实很大程度上，我们是希望重新渲染的。所以，这就需要开发者自己保证避免数据突变。<br>如果想使2中的按钮被点击后可以正确渲染ListOfWords，也很简单，在WordAdder的handleClick内部，将 const words = this.state.words; 改为const words = this.state.words.slice(0); 就行啦~（这时的words是在原来state的基础上复制出来一个新数组，所以引用地址当然变啦）</p>
+<h1 id="其他陷阱"><a href="#其他陷阱" class="headerlink" title="其他陷阱"></a>其他陷阱</h1><p>需要注意的是，还有一些小陷阱需要避免。</p>
+<p>1.Literal Array与Literal Object</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="keyword">this</span>.props.items.map(<span class="function"><span class="params">i</span> =&gt;</span></span><br><span class="line">    &lt;Cell data=&#123;i&#125; options=&#123;<span class="keyword">this</span>.props.options || []&#125; /&gt;</span><br><span class="line">)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>若options为空，则会使用[]。[]每次会生成新的Array，因此导致Cell每次的props都不一样，导致需要重绘。解决方法如下:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const<span class="built_in"> default </span>= [];</span><br><span class="line">&#123;this.props.items.map(i =&gt;</span><br><span class="line">  &lt;Cell data=&#123;i&#125; options=&#123;this.props.options || default&#125; /&gt;</span><br><span class="line">)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.内联函数</p>
+<p>函数也经常作为props传递，由于每次需要为内联函数创建一个新的实例，所以每次function都会指向不同的内存地址。比如：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">     &lt;MyInput onChange=&#123;<span class="function"><span class="params">e</span> =&gt;</span> <span class="keyword">this</span>.props.update(e.target.value)&#125; /&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以及：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">update(e) &#123;</span><br><span class="line">     <span class="keyword">this</span>.props.update(e.target.value);</span><br><span class="line">&#125;</span><br><span class="line">render() &#123;</span><br><span class="line">     <span class="keyword">return</span> &lt;MyInput onChange=&#123;<span class="keyword">this</span>.update.bind(<span class="keyword">this</span>)&#125; /&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意第二个例子也会导致创建新的函数实例。为了解决这个问题，需要提前绑定this指针：</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">constructor</span><span class="params">(props)</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    super(props);</span></span></span><br><span class="line"><span class="function"><span class="comment">    this.update = this.update.bind(this);</span></span></span><br><span class="line"><span class="function"><span class="comment">  &#125;</span></span></span><br><span class="line"><span class="function">  <span class="title">update</span><span class="params">(e)</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    this.props.update(e.target.value);</span></span></span><br><span class="line"><span class="function"><span class="comment">  &#125;</span></span></span><br><span class="line"><span class="function">  <span class="title">render</span><span class="params">()</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    return &lt;MyInput onChange=&#123;this.update&#125;</span> /&gt;;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="源码解析"><a href="#源码解析" class="headerlink" title="源码解析"></a>源码解析</h1><p><strong>Component部分：</strong> </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Component</span>(<span class="params">props, context, updater</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.props = props;</span><br><span class="line">  <span class="keyword">this</span>.context = context;</span><br><span class="line">  <span class="keyword">this</span>.refs = emptyObject;</span><br><span class="line">  <span class="keyword">this</span>.updater = updater || ReactNoopUpdateQueue; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Component.prototype.isReactComponent = &#123;&#125;; <span class="comment">//没有什么特别的用处</span></span><br><span class="line">Component.prototype.setState = <span class="function"><span class="keyword">function</span>(<span class="params">partialState, callback</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//setState用来更新组件的状态</span></span><br><span class="line">  <span class="comment">//partialState 可以是对象，也可以是方法，在后续的react版本中会更多的推荐使用方法</span></span><br><span class="line">  invariant(<span class="comment">//一个提醒，判断一下partialState是不是object或者function或者null，如果都不满足就给出下面的提醒，不是重要的代码</span></span><br><span class="line">    <span class="keyword">typeof</span> partialState === <span class="string">'object'</span> ||</span><br><span class="line">      <span class="keyword">typeof</span> partialState === <span class="string">'function'</span> ||</span><br><span class="line">      partialState == <span class="literal">null</span>,</span><br><span class="line">    <span class="string">'setState(...): takes an object of state variables to update or a '</span> +</span><br><span class="line">      <span class="string">'function which returns an object of state variables.'</span>,</span><br><span class="line">  );</span><br><span class="line">  <span class="keyword">this</span>.updater.enqueueSetState(<span class="keyword">this</span>, partialState, callback, <span class="string">'setState'</span>);<span class="comment">//enqueueSetState在react-Dom里面</span></span><br><span class="line">&#125;;</span><br><span class="line">Component.prototype.forceUpdate = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.updater.enqueueForceUpdate(<span class="keyword">this</span>, callback, <span class="string">'forceUpdate'</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>PureComponent部分：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">PureComponent</span>(<span class="params">props, context, updater</span>) </span>&#123;<span class="comment">//PureComponent可以认为是继承Component</span></span><br><span class="line">  <span class="keyword">this</span>.props = props;</span><br><span class="line">  <span class="keyword">this</span>.context = context;</span><br><span class="line">  <span class="comment">// If a component has string refs, we will assign a different object later.</span></span><br><span class="line">  <span class="keyword">this</span>.refs = emptyObject;</span><br><span class="line">  <span class="keyword">this</span>.updater = updater || ReactNoopUpdateQueue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pureComponentPrototype = (PureComponent.prototype = <span class="keyword">new</span> ComponentDummy());</span><br><span class="line">pureComponentPrototype.constructor = PureComponent;</span><br><span class="line"><span class="comment">// Avoid an extra prototype jump for these methods.</span></span><br><span class="line"><span class="built_in">Object</span>.assign(pureComponentPrototype, Component.prototype);</span><br><span class="line"><span class="comment">//通过这么一个标识知道继承自这个类的组件来源于PureComponent，在后续的reactDom就会去判断是不是一个pureComponentPrototype</span></span><br><span class="line">pureComponentPrototype.isPureReactComponent = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -534,8 +581,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -645,6 +701,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#默认渲染行为"><span class="nav-number">1.</span> <span class="nav-text">默认渲染行为</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React-Component-与-React-PureComponent"><span class="nav-number">2.</span> <span class="nav-text">React.Component 与 React.PureComponent</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他陷阱"><span class="nav-number">3.</span> <span class="nav-text">其他陷阱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码解析"><span class="nav-number">4.</span> <span class="nav-text">源码解析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -672,7 +744,7 @@
     
       <span class="post-meta-item-text"></span>
     
-    <span title="Site words total count">10.5k</span>
+    <span title="Site words total count">12k</span>
   
 </div>
 
