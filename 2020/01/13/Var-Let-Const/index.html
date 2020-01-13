@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="ES6,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="白茶清欢无别事，我在等风也等你">
-<meta property="og:type" content="website">
-<meta property="og:title" content="喬喬">
-<meta property="og:url" content="http://yoursite.com/tags/Object/index.html">
+<meta name="description" content="ES5只有全局作用域和函数作用域，没有块级作用域,这带来很多不合理的场景,比如内层变量可能覆盖外层变量，用来计数的循环变量泄露为全局变量，ES6引入了块级作用域来强化对变量生命周期的控制，新增了let和const两个命令，这两个命令的用法类似于var，但是又和var有所不同。">
+<meta name="keywords" content="ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Var&amp;Let&amp;Const">
+<meta property="og:url" content="http://yoursite.com/2020/01/13/Var-Let-Const/index.html">
 <meta property="og:site_name" content="喬喬">
-<meta property="og:description" content="白茶清欢无别事，我在等风也等你">
+<meta property="og:description" content="ES5只有全局作用域和函数作用域，没有块级作用域,这带来很多不合理的场景,比如内层变量可能覆盖外层变量，用来计数的循环变量泄露为全局变量，ES6引入了块级作用域来强化对变量生命周期的控制，新增了let和const两个命令，这两个命令的用法类似于var，但是又和var有所不同。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-01-13T09:37:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="喬喬">
-<meta name="twitter:description" content="白茶清欢无别事，我在等风也等你">
+<meta name="twitter:title" content="Var&amp;Let&amp;Const">
+<meta name="twitter:description" content="ES5只有全局作用域和函数作用域，没有块级作用域,这带来很多不合理的场景,比如内层变量可能覆盖外层变量，用来计数的循环变量泄露为全局变量，ES6引入了块级作用域来强化对变量生命周期的控制，新增了let和const两个命令，这两个命令的用法类似于var，但是又和var有所不同。">
 
 
 
@@ -124,7 +126,7 @@
 
 
 
-  <title>标签: Object | 喬喬</title>
+  <title>Var&Let&Const | 喬喬</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,156 +281,256 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Object<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/Var-Let-Const/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="乔乔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="喬喬">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/20/继承/" itemprop="url">
-              
-                <span itemprop="name">继承</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Var&Let&Const</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-20T17:55:40+08:00" content="2019-08-20">
-          08-20
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-13T17:35:36+08:00">
+                2020-01-13
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  666
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/19/原型链/" itemprop="url">
-              
-                <span itemprop="name">原型链</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-19T17:56:10+08:00" content="2019-08-19">
-          08-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <hr>
+<p>ES5只有全局作用域和函数作用域，没有块级作用域,这带来很多不合理的场景,比如内层变量可能覆盖外层变量，用来计数的循环变量泄露为全局变量，ES6引入了块级作用域来强化对变量生命周期的控制，新增了let和const两个命令，这两个命令的用法类似于var，但是又和var有所不同。</p>
+<a id="more"></a>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<h3 id="var和let-const的区别"><a href="#var和let-const的区别" class="headerlink" title="var和let/const的区别"></a>var和let/const的区别</h3><ul>
+<li><strong>变量声明提升 ：</strong> var声明的变量会提升到作用域的顶部，而let和const不会。</li>
+<li><strong>块级作用域：</strong> var声明的变量作用域范围是函数作用域，而let和const声明的变量作用域范围是块级作用域。</li>
+<li><strong>重复声明变量：</strong> var可以重复声明同一个变量，而let和const不会</li>
+<li>var声明的全局变量会被挂载到顶层对象下面上，而let和const不会（浏览器环境顶层对象是: window，node环境顶层对象是: global）</li>
+</ul>
+<p><strong>const命令两个注意点:</strong></p>
+<p>1、const 声明之后必须马上赋值，否则会报错。<br>2、const 声明的常量，一旦声明则不能再次赋值，再次赋值会报错(复杂类型(数组、对象等)指针指向的地址不能更改，内部数据可以更，即更改对象属性不会，因为对象地址没有变)。</p>
+<h3 id="声明提升"><a href="#声明提升" class="headerlink" title="声明提升"></a>声明提升</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a);  <span class="comment">// 输出undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(b);  <span class="comment">// 报错</span></span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="string">'ABC'</span>;</span><br><span class="line"><span class="keyword">const</span> c = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/16/原型/" itemprop="url">
-              
-                <span itemprop="name">原型</span>
-              
-            </a>
-        
-      </h2>
+<h3 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">if</span>(flag) &#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">'abc'</span>;</span><br><span class="line">    <span class="keyword">let</span> b = <span class="string">'ABC'</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(a); <span class="comment">// 输出abc</span></span><br><span class="line">    <span class="built_in">console</span>.log(b); <span class="comment">// 输出ABC</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(a); <span class="comment">// 输出abc</span></span><br><span class="line">  <span class="built_in">console</span>.log(b); <span class="comment">// 报错</span></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-16T18:29:15+08:00" content="2019-08-16">
-          08-16
-        </time>
-      </div>
+<h3 id="重复声明变量："><a href="#重复声明变量：" class="headerlink" title="重复声明变量："></a>重复声明变量：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 输出abc</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="string">'ABC'</span>;</span><br><span class="line"><span class="keyword">let</span> b;<span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
+<h3 id="挂载到全局变量："><a href="#挂载到全局变量：" class="headerlink" title="挂载到全局变量："></a>挂载到全局变量：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="string">'ABC'</span>;</span><br><span class="line"><span class="keyword">const</span> c = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a);  <span class="comment">// 输出abc</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.b);  <span class="comment">// 输出undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.c); <span class="comment">// 输出undefined</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="const常量："><a href="#const常量：" class="headerlink" title="const常量："></a>const常量：</h3><p>简单类型不能改动：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const c = <span class="number">123</span><span class="comment">;</span></span><br><span class="line"><span class="attribute">c</span> = <span class="number">345</span><span class="comment">; // 报错</span></span><br></pre></td></tr></table></figure>
 
-      
-        
+<p>复杂类型：变量地址不能改变</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const p = [<span class="string">'不能改动'</span>];</span><br><span class="line">const p2 = &#123;</span><br><span class="line">  name: <span class="string">'OBKoro1'</span></span><br><span class="line">&#125;;</span><br><span class="line">p[<span class="number">0</span>] = <span class="string">'不报错'</span>;</span><br><span class="line">p2.name = <span class="string">'不报错'</span>;</span><br><span class="line">p = [<span class="string">'报错'</span>];</span><br><span class="line">p2 = &#123;</span><br><span class="line">  name: <span class="string">'报错'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/15/面向对象的程序设计模式/" itemprop="url">
-              
-                <span itemprop="name">面向对象的程序设计模式</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-15T10:58:55+08:00" content="2019-08-15">
-          08-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/12/理解对象/" itemprop="url">
-              
-                <span itemprop="name">理解对象</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-12T16:08:41+08:00" content="2019-08-12">
-          08-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+<p>const所说的一旦声明值就不能改变，实际上指的是：<strong>变量指向的那个内存地址所保存的数据不得改动</strong></p>
+<p><strong>简单类型(number、string、boolean)：</strong> 内存地址就是值,即常量(一变就报错).</p>
+<p><strong>复杂类型(对象、数组等)：</strong> 地址保存的是一个指针，const只能保证指针是固定的(总是指向同一个地址),它内部的值是可以改变的(不要以为const就安全了！)</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    乔乔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2020/01/13/Var-Let-Const/" title="Var&Let&Const">http://yoursite.com/2020/01/13/Var-Let-Const/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，著作权归作者所有，转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div> 
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i>ES6</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/03/React源码解析之Component和PureComponent/" rel="next" title="React源码解析之Component和PureComponent">
+                <i class="fa fa-chevron-left"></i> React源码解析之Component和PureComponent
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -436,6 +538,13 @@
 
 
           
+
+  
+        <div id="gitalk-container"></div>
+    </div>
+  
+
+
 
         </div>
         
@@ -456,8 +565,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -567,6 +685,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#var和let-const的区别"><span class="nav-number">1.</span> <span class="nav-text">var和let/const的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明提升"><span class="nav-number">2.</span> <span class="nav-text">声明提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块级作用域"><span class="nav-number">3.</span> <span class="nav-text">块级作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重复声明变量："><span class="nav-number">4.</span> <span class="nav-text">重复声明变量：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挂载到全局变量："><span class="nav-number">5.</span> <span class="nav-text">挂载到全局变量：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const常量："><span class="nav-number">6.</span> <span class="nav-text">const常量：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -575,8 +709,8 @@
 
 
         
-      </div>
-    </main>
+      </main></div>
+    
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
@@ -633,7 +767,7 @@
 
     
 
-  </div>
+  
 
   
 
@@ -708,6 +842,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -748,6 +886,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'bcc640408a5b09a8f3b7',
+          clientSecret: '676bd2e18630a252975edba8f6cefc45b8a77e34',
+          repo: 'qiaoyuxia11.github.io',
+          owner: 'qiaoyuxia11',
+          admin: ['qiaoyuxia11'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   
