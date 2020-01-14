@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/16/原型/yuanxing2.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/16/原型/yuanxing3.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/16/原型/yuanxing4.png">
-<meta property="og:updated_time" content="2020-01-13T06:51:48.000Z">
+<meta property="og:updated_time" content="2020-01-14T07:56:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原型">
 <meta name="twitter:description" content="对于初学者来说，JavaScript的原型是一件让人头疼甚至吐血的事情，prototype和__proto__又让人傻傻分不清，虽然网上有很多相关资料，还有一张经典的图，线条很多，看的就头疼，更甚者吐血身亡，就算是对于“老人”，也不好整明白呀，或者好不容易搞清楚了，过几天又忘了（我就是这样，嘿嘿）。接下来请允许我尽可能形象生动的来阐述明白，哈哈哈哈哈。。。">
@@ -424,11 +424,11 @@
 <p>对于初学者来说，JavaScript的原型是一件让人头疼甚至吐血的事情，prototype和<code>__proto__</code>又让人傻傻分不清，虽然网上有很多相关资料，还有一张经典的图，线条很多，看的就头疼，更甚者吐血身亡，就算是对于“老人”，也不好整明白呀，或者好不容易搞清楚了，过几天又忘了（我就是这样，嘿嘿）。接下来请允许我尽可能形象生动的来阐述明白，哈哈哈哈哈。。。</p>
 <a id="more"></a>
 
-<h2 id="理解原型对象"><a href="#理解原型对象" class="headerlink" title="理解原型对象"></a>理解原型对象</h2><h3 id="prototype-和-proto-？"><a href="#prototype-和-proto-？" class="headerlink" title="prototype 和 __proto__ ？"></a>prototype 和 <code>__proto__</code> ？</h3><p>prototype是只有函数才会有的属性；而<code>__proto__</code>是所有对象（除了 null）都有的属性。<br>几乎所有的函数都有一个prototype属性，这个属性只想函数的原型对象，prototype上挂载的所有属性和方法都可以被这个函数的实例继承。</p>
+<h2 id="理解原型对象"><a href="#理解原型对象" class="headerlink" title="理解原型对象"></a>理解原型对象</h2><h3 id="prototype-和-proto-？"><a href="#prototype-和-proto-？" class="headerlink" title="prototype 和 __proto__ ？"></a>prototype 和 <code>__proto__</code> ？</h3><p>prototype是只有函数才会有的属性；而<code>__proto__</code>是所有对象（除了 null）都有的属性。<br>几乎所有的函数都有一个prototype属性，这个属性指向函数的原型对象，prototype上挂载的所有属性和方法都可以被这个函数的实例继承。</p>
 <p>不管什么时候，只要你创建了一个函数，它就会具有prototype属性，这个属性指向函数的原型对象。默认情况下所有的对象都会又一个constructor(构造函数属性)，这个属性指向prototype属性所在函数的指针。emm~ 是不是看晕了？没关系，让我们来点代码和配图，你可以直接吐了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">//这个是一个构造函数</span></span><br><span class="line">Person.prototype <span class="comment">//这个是函数的原型对象</span></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(); <span class="comment">// 调用构造函数创建的实例</span></span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(); <span class="comment">// 调用构造函数创建的实例</span></span><br></pre></td></tr></table></figure>
 
-<p>代码分析：创建了一个自定义的构造函数之后，其原型对象默认会取得一个constructor属性，Person.prototype.constructor指向的是Person,当调用一个构造函数创建一个实例之后，该实例的内部就会有一个指针<code>__proto__</code>（内部属性[[Prototype]]）,指向构造函数的原型对象，这个连接存在与实例与构造函数的原型对象之间，而不是实例与构造函数之间。</p>
+<p>代码分析：创建了一个自定义的构造函数之后，其原型对象默认会取得一个constructor属性，Person.prototype.constructor指向的是Person,当调用一个构造函数创建一个实例之后，该实例的内部就会有一个指针<code>__proto__</code>（内部属性[[Prototype]]）,指向构造函数的原型对象，这个连接存在于实例与构造函数的原型对象之间，而不是实例与构造函数之间。</p>
 <p><img src="/2019/08/16/原型/yuanxing1.png" alt="原型"></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Person.prototype===person1.__proto__ <span class="comment">//true</span></span><br><span class="line">person1.__proto__.constructor === person1.constructor===Person <span class="comment">// true</span></span><br><span class="line">Person.constructor===<span class="built_in">Function</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
