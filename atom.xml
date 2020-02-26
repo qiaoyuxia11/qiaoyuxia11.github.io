@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-26T08:58:21.176Z</updated>
+  <updated>2020-02-26T09:10:06.106Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,23 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于http</title>
+    <link href="http://yoursite.com/2020/02/26/%E5%85%B3%E4%BA%8Ehttp/"/>
+    <id>http://yoursite.com/2020/02/26/关于http/</id>
+    <published>2020-02-26T09:05:10.000Z</published>
+    <updated>2020-02-26T09:10:06.106Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h3 id=&quot;基本概念：&quot;&gt;&lt;a href=&quot;#基本概念：&quot; class=&quot;headerlink&quot; title=&quot;基本概念：&quot;&gt;&lt;/a&gt;基本概念：&lt;/h3&gt;&lt;p&gt;HTTP，全称为 HyperText Transfer Protocol，即为超文本传输协议。是互联网应用最为广泛的一种网络协议&lt;br&gt;所有的 www 文件都必须遵守这个标准。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>this指向以及 call appy bind用法</title>
     <link href="http://yoursite.com/2020/02/26/this%E6%8C%87%E5%90%91%E4%BB%A5%E5%8F%8A-call-appy-bind%E7%94%A8%E6%B3%95/"/>
     <id>http://yoursite.com/2020/02/26/this指向以及-call-appy-bind用法/</id>
     <published>2020-02-26T08:57:18.000Z</published>
-    <updated>2020-02-26T08:58:21.176Z</updated>
+    <updated>2020-02-26T09:04:21.287Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;hr&gt;
+      &lt;hr&gt;
 &lt;p&gt;在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象&lt;/p&gt;
-&lt;p&gt;图解：&lt;br&gt;&lt;img
-        
-      
     
     </summary>
     
@@ -260,6 +272,69 @@
     
     
       <category term="Object" scheme="http://yoursite.com/tags/Object/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>节流函数和防抖函数</title>
+    <link href="http://yoursite.com/2019/03/26/%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0%E5%92%8C%E9%98%B2%E6%8A%96%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2019/03/26/节流函数和防抖函数/</id>
+    <published>2019-03-26T09:12:36.000Z</published>
+    <updated>2020-02-26T09:13:55.925Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;“节流”与“防抖”的本质： 这两个东西都以闭包的形式存在。&lt;/p&gt;
+&lt;p&gt;它们通过对事件对应的回调函数进行包裹、以自由变量的形式缓存时间信息，最后用 setTimeout 来控制事件的触发频率。防抖函数和节流函数都是用来提升性能优化及用户体验的一种方案；&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>同源策略和跨域</title>
+    <link href="http://yoursite.com/2019/02/26/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E5%92%8C%E8%B7%A8%E5%9F%9F/"/>
+    <id>http://yoursite.com/2019/02/26/同源策略和跨域/</id>
+    <published>2019-02-26T09:10:58.000Z</published>
+    <updated>2020-02-26T09:12:51.610Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h3 id=&quot;浏览器的同源策略&quot;&gt;&lt;a href=&quot;#浏览器的同源策略&quot; class=&quot;headerlink&quot; title=&quot;浏览器的同源策略&quot;&gt;&lt;/a&gt;浏览器的同源策略&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;浏览器安全的基石是“同源策略”（same-origin policy）。所谓“同源”指的是“三个相同”：&lt;/p&gt;
+&lt;p&gt;  协议相同&lt;br&gt;  域名相同&lt;br&gt;  端口相同&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>回流（Reflow）与重绘（Repaint）</title>
+    <link href="http://yoursite.com/2018/07/26/%E5%9B%9E%E6%B5%81%EF%BC%88Reflow%EF%BC%89%E4%B8%8E%E9%87%8D%E7%BB%98%EF%BC%88Repaint%EF%BC%89/"/>
+    <id>http://yoursite.com/2018/07/26/回流（Reflow）与重绘（Repaint）/</id>
+    <published>2018-07-26T05:14:19.000Z</published>
+    <updated>2020-02-26T09:16:19.314Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;回流&lt;/strong&gt;：浏览器要花时间去渲染页面，当我们对 DOM 的修改引发了 DOM 几何尺寸的变化（比如修改元素的宽、高或隐藏元素等）时，影响到了布局，&lt;br&gt;浏览器需要倒回去重新计算元素的几何属性（其他元素的几何属性和位置也会因此受到影响），&lt;br&gt;然后再将计算的结果绘制出来。这个过程就是回流（也叫重排）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重绘&lt;/strong&gt;：当我们对 DOM 的修改导致了样式的变化、却并未影响其几何属性（比如修改了颜色或背景色）时，&lt;br&gt;浏览器不需重新计算元素的几何属性、直接为该元素绘制新的样式（跳过了上图所示的回流环节）。这个过程叫做重绘。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
     
   </entry>
   

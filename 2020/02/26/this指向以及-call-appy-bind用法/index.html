@@ -81,22 +81,22 @@
 
 
 
-<meta name="description" content="在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象 图解： 全局环境下的thisnodejs环境1console.log(this) // &amp;#123;&amp;#125;  浏览器环境 全局环境下的this，在nodejs中是{}，实际指向的是module.exports这个模块作用域,，浏览器指向的是Window。 函数内（function）中的this">
+<meta name="description" content="在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this指向以及 call appy bind用法">
 <meta property="og:url" content="http://yoursite.com/2020/02/26/this指向以及-call-appy-bind用法/index.html">
 <meta property="og:site_name" content="喬喬">
-<meta property="og:description" content="在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象 图解： 全局环境下的thisnodejs环境1console.log(this) // &amp;#123;&amp;#125;  浏览器环境 全局环境下的this，在nodejs中是{}，实际指向的是module.exports这个模块作用域,，浏览器指向的是Window。 函数内（function）中的this">
+<meta property="og:description" content="在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/C7887B18E3C44F9183A6D62655B5CFE0/4484">
+<meta property="og:image" content="http://yoursite.com/2020/02/26/this指向以及-call-appy-bind用法/this.jpeg">
 <meta property="og:image" content="https://note.youdao.com/yws/public/resource/82c71b5ff4790b279e8b0c9cd1a38e0c/xmlnote/1722AF4904494AFCAF4CD502ECE16F74/2889">
 <meta property="og:image" content="https://note.youdao.com/yws/public/resource/82c71b5ff4790b279e8b0c9cd1a38e0c/xmlnote/83B54FBBB6C440FE8D5408A6EC3D795D/2898">
 <meta property="og:image" content="https://note.youdao.com/yws/public/resource/82c71b5ff4790b279e8b0c9cd1a38e0c/xmlnote/2534B508E4944C1DBF578FE4B224F389/2907">
-<meta property="og:updated_time" content="2020-02-26T08:58:21.176Z">
+<meta property="og:updated_time" content="2020-02-26T09:04:21.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this指向以及 call appy bind用法">
-<meta name="twitter:description" content="在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象 图解： 全局环境下的thisnodejs环境1console.log(this) // &amp;#123;&amp;#125;  浏览器环境 全局环境下的this，在nodejs中是{}，实际指向的是module.exports这个模块作用域,，浏览器指向的是Window。 函数内（function）中的this">
-<meta name="twitter:image" content="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/C7887B18E3C44F9183A6D62655B5CFE0/4484">
+<meta name="twitter:description" content="在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/26/this指向以及-call-appy-bind用法/this.jpeg">
 
 
 
@@ -421,7 +421,8 @@
       
         <hr>
 <p>在 ES5 中，其实 this 的指向，始终坚持一个原理：this 永远指向最后调用它的那个对象</p>
-<p>图解：<br><img src="https://note.youdao.com/yws/public/resource/095eb21e16e0c134692d58aaac820145/xmlnote/C7887B18E3C44F9183A6D62655B5CFE0/4484" alt></p>
+<a id="more"></a>
+<p>图解：<br><img src="/2020/02/26/this指向以及-call-appy-bind用法/this.jpeg" alt="this"></p>
 <h3 id="全局环境下的this"><a href="#全局环境下的this" class="headerlink" title="全局环境下的this"></a>全局环境下的this</h3><h5 id="nodejs环境"><a href="#nodejs环境" class="headerlink" title="nodejs环境"></a>nodejs环境</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>) <span class="comment">// &#123;&#125;</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="浏览器环境"><a href="#浏览器环境" class="headerlink" title="浏览器环境"></a>浏览器环境</h5><p><img src="https://note.youdao.com/yws/public/resource/82c71b5ff4790b279e8b0c9cd1a38e0c/xmlnote/1722AF4904494AFCAF4CD502ECE16F74/2889" alt></p>
@@ -547,6 +548,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2020/02/26/关于http/" rel="prev" title="关于http">
+                关于http <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -627,7 +632,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -763,7 +768,7 @@
     
       <span class="post-meta-item-text"></span>
     
-    <span title="Site words total count">14.2k</span>
+    <span title="Site words total count">18.5k</span>
   
 </div>
 
